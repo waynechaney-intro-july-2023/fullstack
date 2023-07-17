@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './componets/header.componet';
+import { NavigationComponent } from "./componets/navigation.component";
 
 
  
@@ -13,7 +14,7 @@ import { HeaderComponent } from './componets/header.componet';
     standalone: true,
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    imports: [CommonModule, RouterOutlet, HeaderComponent]
+    imports: [CommonModule, RouterOutlet, HeaderComponent, NavigationComponent]
 })
 
 export class AppComponent {
