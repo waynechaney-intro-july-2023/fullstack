@@ -1,32 +1,28 @@
+import { Component } from '@angular/core';
 
-import { Component } from "@angular/core";
-
-import { RouterLink, RouterLinkActive } from "@angular/router";
-
- 
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
+  standalone: true,
 
-    standalone: true,
+  imports: [RouterLink, RouterLinkActive],
 
-    imports: [RouterLink, RouterLinkActive],
+  template: ` <nav class="tabs tabs-boxed">
+    <a
+      [routerLinkActive]="['tab-active']"
+      routerLink="dashboard"
+      class="tab tab-lg"
+      >Dashboard</a
+    >
+    <a [routerLinkActive]="['tab-active']" routerLink="todos" class="tab tab-lg"
+      >Todos</a
+    >
 
-    template: `
+    <a [routerLinkActive]="['tab-active']" routerLink="about" class="tab tab-lg"
+      >About</a
+    >
+  </nav>`,
 
-        <nav class="tabs tabs-boxed">
-
-            <a [routerLinkActive]="['tab-active']" routerLink="dashboard" class="tab tab-lg">Dashboard</a> 
-
-            <a [routerLinkActive]="['tab-active']" routerLink="about" class="tab tab-lg">About</a> 
-
-        </nav>`,
-
-    selector: 'app-navigation'
-
+  selector: 'app-navigation',
 })
-
-export class NavigationComponent {
-
- 
-
-}
+export class NavigationComponent {}
